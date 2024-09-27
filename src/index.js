@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 
 
- const arr = [{"name": "Manjunath", "age": 25}];
+ const arr = [{name: "Manjunath", age: 25}, {name: naruto, age: 19}];
 
 app.get('/', (req, res) => {
   res.status(200).send(arr);
