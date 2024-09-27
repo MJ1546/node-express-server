@@ -15,8 +15,8 @@ app.get('/', (req, res) => {
 
 app.post('/saveEmployee', (req, res) => {
   let emp = {
-    name: res.body.name,
-    age: res.body.age
+    name: req.body.name,
+    age: req.body.age
   }
   arr.push(emp);
   res.status(200).send("Data Saved Successfully..!!");
