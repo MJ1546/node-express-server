@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-var arr = [{name: "Manjunath", age: 25}, {name: "Naruto", age: 19}];
+var arr = [{name: "Manjunath", age: 25}, {name: "Tejas", age: 25}];
 
 app.get('/', (req, res) => {
   res.status(200).send(arr);
