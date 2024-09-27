@@ -22,7 +22,7 @@ app.post('/saveEmployee', (req, res) => {
     age: req.body.age
   }
   arr.push(emp);
-  res.status(200).send("Data Saved Successfully..!!");
+  res.status(200).send({"msg":"Data Saved Successfully..!!"});
 });
 
 app.listen(process.env.PORT || 8083, () =>
