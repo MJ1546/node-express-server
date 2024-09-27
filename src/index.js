@@ -1,13 +1,16 @@
-
-const cors = require('cors');
-const express = require('express');
+// import 'dotenv/config';
+const cors  =  require('cors');
+const express =  require('express');
 
 const app = express();
 
 app.use(cors());
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
- const arr = [{name: "Manjunath", age: 25}, {name: "Naruto", age: 19}];
+
+var arr = [{name: "Manjunath", age: 25}, {name: "Naruto", age: 19}];
 
 app.get('/', (req, res) => {
   res.status(200).send(arr);
@@ -22,6 +25,6 @@ app.post('/saveEmployee', (req, res) => {
   res.status(200).send("Data Saved Successfully..!!");
 });
 
-app.listen(process.env.PORT, () =>
-  console.log(`Example app listening on port ${process.env.PORT}!`),
+app.listen(process.env.PORT || 8083, () =>
+  console.log(`Example app listening on port 8083!`),
 );
