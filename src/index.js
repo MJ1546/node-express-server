@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
   res.status(200).send(arr);
 });
 
-app.get('/saveEmployee', (req, res) => {
+app.post('/saveEmployee', (req, res) => {
   let emp = {
     name: res.body.name,
     age: res.body.age
