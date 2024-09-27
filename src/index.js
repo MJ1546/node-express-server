@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 
 app.post('/saveEmployee', (req, res) => {
   let emp = {
-    username: req.body.name,
+    name: req.body.name,
     age: req.body.age
   }
   arr.push(emp);
